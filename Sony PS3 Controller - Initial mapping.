@@ -1,0 +1,71 @@
+Sony PS3 Controller - Initial mapping.
+
+data[2] = Dpad
+0 = nothing pressed.
+16 = UP
+32 = RIGHT
+64 = DOWN
+128 = LEFT
+[Note UP+RIGHT = 16+32 = 48 etc.]
+
+data[3] = Action's Pad
+0 = nothing pressed.
+16 = Triangle
+32 = Circle
+64 = X
+128 = Square
+[Note Triangle+Circle = 16+32 = 48 etc.]
+
+data[4] = PS / Power button
+0 = inactive
+1 = pressed
+
+data[6] = Left Joystick :: x-axis
+Left = 0;
+Right = 255;
+
+data[7] = Left Joystick :: y-axis
+Up = 0;
+Down = 255;
+
+data[8] = Right Joystick :: x-axis
+Left = 0;
+Right = 255;
+
+data[9] = Right Joystick :: y-axis
+Up = 0;
+Down = 255;
+
+data[18] = Left Trigger [L2]
+Pressed gradient: 0 to 255
+
+data[19] = Right Trigger [R2]
+Pressed gradient: 0 to 255
+
+data[20] = Left Button [L1]
+Pressed gradient: 0 to 255
+
+data[21] = Right Button [R1]
+Pressed gradient: 0 to 255
+
+data[41] = Accelorometer [x-axis] - Binary
+Lean Right = 1
+Lean Left = 2
+
+data[42] = Accelorometer [x-axis]
+0 to 255
+
+data[43] = Accelorometer [y-axis] - Binary
+Lean Down = 1
+Lean Up = 2
+
+data[44] = Accelorometer [y-axis]
+0 to 255
+
+data[45] = Accelorometer [z-axis] - Binary
+Lean Forward = 1
+Lean Back = 2
+
+data[46] = Accelorometer [z-axis]
+0 to 255
+

@@ -1,0 +1,12 @@
+{
+  "name": "ps3drive",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "serialport": "1.0.8",
+    "node-hid": "0.2.2"
+  }
+}
