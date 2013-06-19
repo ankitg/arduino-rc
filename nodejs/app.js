@@ -22,7 +22,8 @@ var R_UPPERY = 138;
 // Setup the serial port (for output) //
 // var sp1 = new SerialPort('/dev/tty.usbmodemfa131', { // Leonardo
 // var sp1 = new SerialPort('/dev/tty.usbmodemfd121', { // UNO
-var sp1 = new SerialPort('/dev/tty.usbserial-A900cfap', { // Duemilanove
+// var sp1 = new SerialPort('/dev/tty.usbserial-A900cfap', { // Duemilanove
+var sp1 = new SerialPort('/dev/tty.FireFly-CC01-SPP', { // Firefly over Bluetooth
  parser: serialport.parsers.readline("\n")
 });
 
@@ -59,55 +60,55 @@ function dataRead(err, data) {
 
     if(rJoyX > R_LOWERX && rJoyX < R_UPPERX && rJoyY > R_LOWERY && rJoyY < R_UPPERY)
     {
-      sp1.write("0");
+      sp1.write("0"); // 48
       //console.log("Centered");
       rJoyDirection = "Centered";
     }
     else if(rJoyX < R_LOWERX && rJoyY > R_LOWERY && rJoyY < R_UPPERY)
     {
-      sp1.write("1");
+      sp1.write("1"); // 49
       //console.log("Left");
       rJoyDirection = "Left";
     }
     else if(rJoyX > R_UPPERX && rJoyY > R_LOWERY && rJoyY < R_UPPERY)
     {
-      sp1.write("2");
+      sp1.write("2"); // 50
       //console.log("Right");
       rJoyDirection = "Right";
     }
     else if(rJoyX > R_LOWERX && rJoyX < R_UPPERX && rJoyY < R_LOWERY)
     {
-      sp1.write("3");
+      sp1.write("3"); // 51
       // console.log("Up");
       rJoyDirection = "Up";
     }
     else if(rJoyX > R_LOWERX && rJoyX < R_UPPERX && rJoyY > R_UPPERY)
     {
-      sp1.write("4");
+      sp1.write("4"); // 52
       // console.log("Down");
       rJoyDirection = "Down";
     }
     else if(rJoyX > R_UPPERX && rJoyY > R_UPPERY)
     {
-      sp1.write("5");
+      sp1.write("5"); // 53
       // console.log("Down + Right");
       rJoyDirection = "Down + Right";
     }
     else if(rJoyX > R_UPPERX && rJoyY < R_LOWERY)
     {
-      sp1.write("6");
+      sp1.write("6"); // 54
       // console.log("Up + Right");
       rJoyDirection = "Up + Right";
     }
     else if(rJoyX < R_LOWERX && rJoyY > R_UPPERY)
     {
-      sp1.write("7");
+      sp1.write("7"); // 55
       // console.log("Down + Left");
       rJoyDirection = "Down + Left";
     }
     else if(rJoyX < R_LOWERX && rJoyY < R_LOWERY)
     {
-      sp1.write("8");
+      sp1.write("8"); // 56
       // console.log("Up + Left");
       rJoyDirection = "Up + Left";
     }
