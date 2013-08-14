@@ -6,9 +6,16 @@
     
     <uses-feature android:name="android.hardware.usb.accessory"/>
     
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" />
+ 	<uses-feature android:name="android.hardware.camera.autofocus" />
+    
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     
     <application
         android:allowBackup="true"
@@ -17,6 +24,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.nitinmalik.arduino_rc.MainActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
